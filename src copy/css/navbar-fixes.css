@@ -1,0 +1,22 @@
+/* Fix for dark/light theme toggle button size */
+.navbar__item button[class*="toggle"] {
+    min-width: 40px !important;
+    min-height: 40px !important;
+    padding: 8px !important;
+}
+
+/* Ensure proper sizing for color mode toggle */
+.navbar__link--active svg,
+.navbar__item svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* Fix navbar spacing to prevent button shrinking */
+.navbar__items--right {
+    gap: 8px;
+}
+
+.navbar__items--right>* {
+    flex-shrink: 0;
+}

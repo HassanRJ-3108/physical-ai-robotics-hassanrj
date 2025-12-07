@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "فزیکل اے آئی اور روبوٹکس",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "فزیکل اے آئی لوگو",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documentation": {
+    "message": "دستاویزات",
+    "description": "Navbar item with label Documentation"
+  }
+}

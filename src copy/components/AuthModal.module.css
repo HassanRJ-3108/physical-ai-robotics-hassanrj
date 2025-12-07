@@ -1,0 +1,147 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    backdrop-filter: blur(4px);
+}
+
+.modal {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 16px;
+    padding: 32px;
+    width: 90%;
+    max-width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.closeButton:hover {
+    opacity: 1;
+}
+
+.authContainer h2,
+.profileSetup h2 {
+    color: #fff;
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+.authContainer p,
+.profileSetup p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Profile Setup Form */
+.profileSetup {
+    color: #fff;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+.field select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.field select option {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+.field input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.goals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.goalButton {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.goalButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.goalButton.selected {
+    background: #6366f1;
+    border-color: #6366f1;
+    color: #fff;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 8px;
+}
+
+.submitButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* Style Supabase Auth UI overrides */
+:global([data-supabase-auth-ui]) {
+    --colors-brand: #6366f1 !important;
+    --colors-brandAccent: #4f46e5 !important;
+}

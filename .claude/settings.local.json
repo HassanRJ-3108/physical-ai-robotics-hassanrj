@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch:*)",
+      "Bash(.specify/scripts/bash/create-new-feature.sh:*)",
+      "Bash(.specify/scripts/bash/setup-plan.sh:*)",
+      "Bash(.specify/scripts/bash/check-prerequisites.sh:*)",
+      "Bash(git rev-parse:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "Bash(yarn swizzle:*)",
+      "Bash(npm run swizzle:*)",
+      "Bash(__NEW_LINE__ .specify/scripts/bash/create-new-feature.sh --json \"Bro I''ve created a book and landing page now my remaining tasks are to create RAG chatbot and integrate with website in frontend like and chat icon floating in bottom right. SignUp and login for better personlization and feed my book in qdrant and connect with RAG chatbot to answere all my queries from data and I will be using better-auth for auth in website signup and login ok\" --number 1 --short-name \"rag-chatbot-auth\")",
+      "Bash(mkdir:*)",
+      "Bash(.specify/scripts/bash/create-phr.sh:*)",
+      "Bash(pipenv install:*)",
+      "Bash(poetry init:*)",
+      "Bash(pip install:*)",
+      "Bash(touch:*)",
+      "Bash(ls:*)",
+      "Bash(D:/Hackathon/hackathon-project/.specify/scripts/bash/create-new-feature.sh:*)",
+      "Bash(D:/Hackathon/hackathon-project/.specify/scripts/bash/create-phr.sh:*)",
+      "Bash(D:/Hackathon/hackathon-project/.specify/scripts/bash/check-prerequisites.sh:*)",
+      "Bash(D:/Hackathon/hackathon-project/.specify/scripts/bash/setup-plan.sh:*)",
+      "Bash(python -m venv:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7"
+  ]
+}

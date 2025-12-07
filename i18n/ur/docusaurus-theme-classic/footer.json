@@ -1,0 +1,54 @@
+{
+  "link.title.Getting Started": {
+    "message": "شروعات",
+    "description": "The title of the footer links column"
+  },
+  "link.title.Simulation & Platforms": {
+    "message": "سمیولیشن اور پلیٹ فارمز",
+    "description": "The title of the footer links column"
+  },
+  "link.title.Advanced Topics": {
+    "message": "اعلیٰ موضوعات",
+    "description": "The title of the footer links column"
+  },
+  "link.item.label.Introduction": {
+    "message": "تعارف",
+    "description": "Footer link label"
+  },
+  "link.item.label.Physical AI": {
+    "message": "فزیکل اے آئی",
+    "description": "Footer link label"
+  },
+  "link.item.label.ROS2": {
+    "message": "آر او ایس ٢",
+    "description": "Footer link label"
+  },
+  "link.item.label.Robot Simulation": {
+    "message": "روبوٹ سمیولیشن",
+    "description": "Footer link label"
+  },
+  "link.item.label.NVIDIA Isaac": {
+    "message": "NVIDIA Isaac",
+    "description": "Footer link label"
+  },
+  "link.item.label.VLA Models": {
+    "message": "VLA ماڈلز",
+    "description": "Footer link label"
+  },
+  "link.item.label.Humanoid Robotics": {
+    "message": "ہیومنوائیڈ روبوٹکس",
+    "description": "Footer link label"
+  },
+  "link.item.label.Hardware Setup": {
+    "message": "ہارڈویئر سیٹ اپ",
+    "description": "Footer link label"
+  },
+  "link.item.label.GitHub": {
+    "message": "گِٹ ہب",
+    "description": "Footer link label"
+  },
+  "copyright": {
+    "message": "کاپی رائٹ © 2025 فزیکل اے آئی اور روبوٹکس۔ Docusaurus کے ساتھ بنایا گیا۔",
+    "description": "The footer copyright"
+  }
+}

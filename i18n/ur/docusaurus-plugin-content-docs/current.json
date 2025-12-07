@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Chapter 1: Physical AI Fundamentals": {
+    "message": "Chapter 1: Physical AI Fundamentals",
+    "description": "The label for category 'Chapter 1: Physical AI Fundamentals' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Chapter 2: ROS 2": {
+    "message": "Chapter 2: ROS 2",
+    "description": "The label for category 'Chapter 2: ROS 2' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Chapter 3: Robot Simulation": {
+    "message": "Chapter 3: Robot Simulation",
+    "description": "The label for category 'Chapter 3: Robot Simulation' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Chapter 4: NVIDIA Isaac Platform": {
+    "message": "Chapter 4: NVIDIA Isaac Platform",
+    "description": "The label for category 'Chapter 4: NVIDIA Isaac Platform' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Chapter 5: Vision-Language-Action": {
+    "message": "Chapter 5: Vision-Language-Action",
+    "description": "The label for category 'Chapter 5: Vision-Language-Action' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Chapter 6: Humanoid Robotics": {
+    "message": "Chapter 6: Humanoid Robotics",
+    "description": "The label for category 'Chapter 6: Humanoid Robotics' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Chapter 7: Hardware Setup": {
+    "message": "Chapter 7: Hardware Setup",
+    "description": "The label for category 'Chapter 7: Hardware Setup' in sidebar 'tutorialSidebar'"
+  }
+}

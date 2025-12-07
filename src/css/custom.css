@@ -1,0 +1,397 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  /* Primary palette */
+  --ifm-color-primary: #1e7a6f;
+  --ifm-color-primary-dark: #18655c;
+  --ifm-color-primary-darker: #155c54;
+  --ifm-color-primary-darkest: #0f4540;
+  --ifm-color-primary-light: #238f83;
+  --ifm-color-primary-lighter: #2b9d90;
+  --ifm-color-primary-lightest: #35afa2;
+
+  /* Tailwind v4-like design tokens (CSS variables only, no Tailwind) */
+  /* Neutrals */
+  --color-bg: #ffffff;
+  --color-bg-muted: #f6f7f9;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-border: #e5e7eb;
+
+  /* Accents */
+  --color-accent: var(--ifm-color-primary);
+  --color-accent-foreground: #ffffff;
+
+  /* Semantic */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Radius & Shadows */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.12);
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  /* Code */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.06);
+
+  /* Gradients */
+  --gradient-hero: radial-gradient(1200px 600px at 20% 30%, rgba(35, 175, 162, 0.18), transparent),
+    radial-gradient(800px 400px at 80% 20%, rgba(31, 92, 84, 0.16), transparent);
+  --gradient-footer: linear-gradient(135deg, rgba(31, 92, 84, 0.9), rgba(35, 175, 162, 0.85));
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+
+  --color-bg: #0b1020;
+  --color-bg-muted: #0f182e;
+  --color-text: #e5e7eb;
+  --color-text-muted: #cbd5e1;
+  --color-border: #1f2937;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+}
+
+/* Global base styles */
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+/* Layout width and RTL fixes */
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* Hero styles */
+.hero-premium {
+  position: relative;
+  padding: var(--space-16) 0;
+  text-align: center;
+  background: var(--gradient-hero);
+}
+
+.hero-premium .hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: -0.02em;
+}
+
+.hero-premium .hero-subtitle {
+  margin-top: var(--space-4);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-text-muted);
+}
+
+.hero-actions {
+  margin-top: var(--space-8);
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-accent-foreground);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-6);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  color: var(--color-accent-foreground);
+  text-decoration: none;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-6);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-ghost:hover {
+  background: var(--color-bg-muted);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* Section cards */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+@media (max-width: 996px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3 {
+  margin: 0 0 var(--space-2) 0;
+}
+
+.card p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+/* Premium Card Effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .glass-card {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Gradients */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+}
+
+/* Learning Path */
+.learning-path {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.learning-step {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.learning-step-title {
+  font-weight: 600;
+}
+
+.learning-step-desc {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.learning-arrow {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+}
+
+.resource-card {
+  display: block;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  margin: var(--space-4) 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.resource-title {
+  font-weight: 600;
+}
+
+.resource-desc {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* Typography refinements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.02em;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.grid-responsive-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+@media (max-width: 996px) {
+  .grid-responsive-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fix theme toggle button size */
+.navbar__item.navbar__link {
+  padding: 0.5rem;
+}
+
+button[class*="toggle"] {
+  padding: 0.5rem !important;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button[class*="colorModeToggle"] {
+  padding: 0.5rem !important;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Better navbar alignment */
+.navbar__items {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar__items--right {
+  gap: 0.75rem;
+}

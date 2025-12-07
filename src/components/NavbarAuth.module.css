@@ -1,0 +1,208 @@
+/* Auth Container */
+.authContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    margin-left: 12px;
+}
+
+/* User Button (logged in) */
+.userButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    min-height: 36px;
+}
+
+.userButton:hover {
+    background: var(--color-bg-muted);
+    border-color: var(--color-text-muted);
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.userName {
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.dropdownIcon {
+    color: var(--color-text-muted);
+    transition: transform 0.2s;
+}
+
+.userButton:hover .dropdownIcon {
+    color: var(--color-text);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    min-width: 180px;
+    z-index: 1000;
+    overflow: hidden;
+    animation: dropdownFadeIn 0.15s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdownItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: var(--font-sans);
+    text-align: left;
+}
+
+.dropdownItem:hover {
+    background: var(--color-bg-muted);
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.dropdownItem svg {
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+}
+
+.dropdownItem:hover svg {
+    color: var(--color-accent);
+}
+
+/* Sign In Button */
+.signInButton {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.signInButton:hover {
+    background: var(--color-bg-muted);
+    text-decoration: none;
+}
+
+/* Sign Up Button */
+.signUpButton {
+    background: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: var(--shadow-sm);
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.signUpButton:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
+    color: white;
+}
+
+/* Mobile responsive */
+@media (max-width: 996px) {
+    .authContainer {
+        margin-left: 0;
+    }
+
+    .userButton {
+        justify-content: flex-start;
+    }
+
+    /* Keep dropdown positioned on the right side below button */
+    .dropdown {
+        right: 0;
+        left: auto;
+        min-width: 200px;
+    }
+
+    .signInButton,
+    .signUpButton {
+        width: auto;
+        justify-content: center;
+        margin: 0 4px;
+    }
+}
+
+/* Dark mode */
+[data-theme='dark'] .userButton {
+    border-color: var(--color-border);
+}
+
+[data-theme='dark'] .userButton:hover {
+    background: var(--color-bg);
+    border-color: var(--color-text-muted);
+}
+
+[data-theme='dark'] .dropdown {
+    background: var(--color-bg-muted);
+    border-color: var(--color-border);
+}
+
+[data-theme='dark'] .dropdownItem:hover {
+    background: var(--color-bg);
+}

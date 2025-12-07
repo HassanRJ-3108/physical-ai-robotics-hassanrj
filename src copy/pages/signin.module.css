@@ -1,0 +1,180 @@
+/* Sign In / Sign Up Page Styles */
+
+.container {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+[data-theme='dark'] .container {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.authCard {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .authCard {
+    background: #1e1e1e;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #1e7a6f;
+}
+
+[data-theme='dark'] .header h1 {
+    color: #4ade80;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+[data-theme='dark'] .header p {
+    color: #94a3b8;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
+[data-theme='dark'] .formGroup label {
+    color: #e2e8f0;
+}
+
+.formGroup input {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #1e7a6f;
+    box-shadow: 0 0 0 3px rgba(30, 122, 111, 0.1);
+}
+
+[data-theme='dark'] .formGroup input {
+    background: #2d2d2d;
+    border-color: #404040;
+    color: #e2e8f0;
+}
+
+[data-theme='dark'] .formGroup input:focus {
+    border-color: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
+}
+
+.error {
+    padding: 0.75rem 1rem;
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    color: #dc2626;
+    font-size: 0.9rem;
+}
+
+[data-theme='dark'] .error {
+    background: #450a0a;
+    border-color: #7f1d1d;
+    color: #fca5a5;
+}
+
+.submitButton {
+    padding: 0.875rem 1.5rem;
+    background: linear-gradient(135deg, #1e7a6f 0%, #16685e 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 122, 111, 0.3);
+}
+
+.submitButton:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submitButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+[data-theme='dark'] .submitButton {
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    color: #0f172a;
+}
+
+.footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #1e7a6f;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+[data-theme='dark'] .footer {
+    color: #94a3b8;
+}
+
+[data-theme='dark'] .footer a {
+    color: #4ade80;
+}
+
+@media (max-width: 640px) {
+    .authCard {
+        padding: 2rem 1.5rem;
+    }
+
+    .header h1 {
+        font-size: 1.75rem;
+    }
+}
