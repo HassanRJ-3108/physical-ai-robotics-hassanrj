@@ -59,10 +59,9 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          // Point to YOUR GitHub repository
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/HassanRJ-3108/physical-ai-robotics-hassanrj/tree/main/',
         },
         blog: {
           showReadingTime: true,
